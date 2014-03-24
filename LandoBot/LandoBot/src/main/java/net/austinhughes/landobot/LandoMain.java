@@ -26,8 +26,10 @@ import android.content.*;
 
 
 // Main view/Process
-public class LandoMain extends Activity //implements SensorEventListener
+public class LandoMain extends Activity
 {
+    receive btReceive;
+
     // Bluetooth setup
     private final static int REQUEST_ENABLE_BT = 1;
     public static BluetoothSocket socket;
@@ -45,6 +47,8 @@ public class LandoMain extends Activity //implements SensorEventListener
             Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
             startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
         }
+
+        btReceive = new receive(btHandler);
     }
 
     @Override
@@ -118,6 +122,8 @@ public class LandoMain extends Activity //implements SensorEventListener
         {
             Toast toast = Toast.makeText(getBaseContext(), "Connected", Toast.LENGTH_LONG);
             toast.show();
+
+            btReceive.start();
         }
         else
         {
@@ -225,4 +231,21 @@ public class LandoMain extends Activity //implements SensorEventListener
             toast.show();
         }
     }
+
+    // The Handler that gets information back from the BluetoothChatService
+    private final Handler btHandler = new Handler()
+    {
+        @Override
+        public void handleMessage(Message msg)
+        {
+
+            byte[] readBuf = (byte[]) msg.obj;
+
+            // construct a string from the valid bytes in the buffer
+            String readMessage = new String(readBuf, 0, msg.arg1);
+
+            Toast.makeText(getApplicationContext(), "Received " + readMessage,
+                                                        Toast.LENGTH_SHORT).show();
+        }
+    };
 }
