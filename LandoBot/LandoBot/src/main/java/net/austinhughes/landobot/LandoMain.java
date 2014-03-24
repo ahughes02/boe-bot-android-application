@@ -47,8 +47,6 @@ public class LandoMain extends Activity
             Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
             startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
         }
-
-        btReceive = new receive(btHandler);
     }
 
     @Override
@@ -122,6 +120,8 @@ public class LandoMain extends Activity
         {
             Toast toast = Toast.makeText(getBaseContext(), "Connected", Toast.LENGTH_LONG);
             toast.show();
+
+            btReceive = new receive(btHandler, socket);
 
             btReceive.start();
         }

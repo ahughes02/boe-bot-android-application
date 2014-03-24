@@ -17,9 +17,10 @@ public class receive extends Thread
 
     private BluetoothSocket btSocket = null;
 
-    public receive(Handler handler)
+    public receive(Handler handler, BluetoothSocket socket)
     {
         btHandler = handler;
+        btSocket = socket;
     }
 
     public void run()
