@@ -212,6 +212,17 @@ public class LandoMain extends Activity
         }
     }
 
+    // Serial code to go backwards
+    public void sweep(View v)
+    {
+        if(socket != null)
+        {
+            send signal = new send(socket, "s");
+            Handler handler = new Handler();
+            handler.post(signal);
+        }
+    }
+
     public void send(View v)
     {
         try

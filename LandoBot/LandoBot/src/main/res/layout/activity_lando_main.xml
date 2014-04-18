@@ -104,9 +104,8 @@
             android:text="Send Debug Message"
             android:id="@+id/button9"
             android:onClick="sendDebug"
-            android:layout_below="@+id/button3"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="36dp" />
+            android:layout_below="@+id/debugInput"
+            android:layout_centerHorizontal="true" />
 
         <EditText
             android:layout_width="wrap_content"
@@ -141,6 +140,15 @@
             android:layout_alignBottom="@+id/button"
             android:layout_alignRight="@+id/button6"
             android:layout_alignEnd="@+id/button6" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Laser Sweep"
+            android:id="@+id/laserButton"
+            android:layout_above="@+id/button"
+            android:layout_centerHorizontal="true"
+            android:onClick="sweep" />
 
     </RelativeLayout>
 
