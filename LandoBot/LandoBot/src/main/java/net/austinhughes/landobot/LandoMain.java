@@ -4,7 +4,7 @@
     This app sends serial commands via bluetooth to the LandoBot
 
     This app was written by Austin Hughes
-    Modified Last: 2014-03-14
+    Modified Last: 2014-04-18
  */
 
 package net.austinhughes.landobot;
