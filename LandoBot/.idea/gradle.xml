@@ -7,8 +7,8 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>
-            <option value="C:\Users\austi_000\Documents\Bitbucket\boe-bot-android\LandoBot" />
-            <option value="C:\Users\austi_000\Documents\Bitbucket\boe-bot-android\LandoBot\LandoBot" />
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/LandoBot" />
           </set>
         </option>
       </GradleProjectSettings>
