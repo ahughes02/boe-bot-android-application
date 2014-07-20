@@ -146,9 +146,10 @@
             android:layout_height="wrap_content"
             android:text="Laser Sweep"
             android:id="@+id/laserButton"
+            android:onClick="sweep"
+            android:layout_marginBottom="46dp"
             android:layout_above="@+id/button"
-            android:layout_centerHorizontal="true"
-            android:onClick="sweep" />
+            android:layout_centerHorizontal="true" />
 
     </RelativeLayout>
 
