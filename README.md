@@ -1,0 +1,1 @@
+This application was designed to run on a Google Nexus 5 running Android 4.4 KitKat. It is only designed to talk to the BOE Bot application located in this repository https://bitbucket.org/ahughes02/boe-bot-sketch
