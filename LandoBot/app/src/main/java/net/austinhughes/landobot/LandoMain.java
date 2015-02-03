@@ -53,7 +53,7 @@ public class LandoMain extends Activity
     public boolean onCreateOptionsMenu(Menu menu)
     {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.lando_main, menu);
+        getMenuInflater().inflate(R.menu.menu_lando_main, menu);
         return true;
     }
 
@@ -256,7 +256,7 @@ public class LandoMain extends Activity
             String readMessage = new String(readBuf, 0, msg.arg1);
 
             Toast.makeText(getApplicationContext(), "Received " + readMessage,
-                                                        Toast.LENGTH_SHORT).show();
+                    Toast.LENGTH_SHORT).show();
         }
     };
 }

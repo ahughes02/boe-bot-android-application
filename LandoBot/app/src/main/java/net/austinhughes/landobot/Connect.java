@@ -15,7 +15,7 @@ public class Connect implements Callable<BluetoothSocket>
     {
         BluetoothAdapter bt = BluetoothAdapter.getDefaultAdapter();
 
-        BluetoothDevice landoBot = bt.getRemoteDevice("00:06:66:61:5F:50");
+        BluetoothDevice landoBot = bt.getRemoteDevice("00:06:66:6B:B1:49");
 
         UUID uuid = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
 
